@@ -6,8 +6,12 @@ export const BooksPage = ({ books, onAddBook }) => {
   const [author, setAuthor] = useState("");
   const [year, setYear] = useState("");
 
+  const startsWithCapital = (val) => /^[A-ZĂÂÎȘȚ]/.test(val.trim());
+
   const handleSubmit = () => {
     if (!title.trim() || !author.trim()) return;
+    if (!startsWithCapital(title)) return alert("Titlul trebuie să înceapă cu majusculă.");
+    if (!startsWithCapital(author)) return alert("Autorul trebuie să înceapă cu majusculă.");
     onAddBook({
       title: title.trim(),
       author: author.trim(),
@@ -40,7 +44,7 @@ export const BooksPage = ({ books, onAddBook }) => {
           style={styles.input}
           placeholder="An apariție"
           value={year}
-          onChange={(e) => setYear(e.target.value)}
+          onChange={(e) => setYear(e.target.value.replace(/\D/g, ""))}
         />
         <button style={styles.button} onClick={handleSubmit}>
           Adaugă
