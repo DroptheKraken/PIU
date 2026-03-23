@@ -12,7 +12,6 @@ export const HomePage = () => {
         <h3 style={{ margin: "0 0 8px 0" }}>Ce poți face:</h3>
         <p style={styles.text}>• Vezi lista de cărți din colecție</p>
         <p style={styles.text}>• Adaugă cărți noi prin formular</p>
-        <p style={styles.text}>• Navighează între pagini</p>
       </div>
     </div>
   );

@@ -11,10 +11,12 @@ export const AboutPage = () => {
         <p style={styles.text}>
           <strong>Tehnologie:</strong> React
         </p>
-        <p style={styles.text}>
-          <strong>Funcționalități:</strong> Navigare cu meniu, stare (state),
-          componente generate cu map(), formular pentru adăugare.
+        <p style={{ ...styles.text, marginBottom: "8px" }}>
+          <strong>Funcționalități:</strong>
         </p>
+        <p style={styles.text}>• Navigare între pagini printr-un meniu dinamic</p>
+        <p style={styles.text}>• Adăugare cărți printr-un formular cu validare</p>
+        <p style={styles.text}>• Date stocate permanent în cloud prin Firebase</p>
       </div>
     </div>
   );
