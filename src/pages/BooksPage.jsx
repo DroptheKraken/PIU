@@ -9,7 +9,7 @@ export const BooksPage = ({ books, onAddBook }) => {
   const startsWithCapital = (val) => /^[A-ZĂÂÎȘȚ]/.test(val.trim());
 
   const handleSubmit = () => {
-    if (!title.trim() || !author.trim()) return;
+    if (!title.trim() || !author.trim() || !year.trim()) return alert("Toate câmpurile sunt obligatorii.");
     if (!startsWithCapital(title)) return alert("Titlul trebuie să înceapă cu majusculă.");
     if (!startsWithCapital(author)) return alert("Autorul trebuie să înceapă cu majusculă.");
     onAddBook({
